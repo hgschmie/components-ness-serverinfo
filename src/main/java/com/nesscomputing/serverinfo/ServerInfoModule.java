@@ -17,6 +17,7 @@ package com.nesscomputing.serverinfo;
 
 import com.google.inject.AbstractModule;
 
+import com.nesscomputing.httpclient.HttpClientObserverGroup;
 import com.nesscomputing.httpclient.guice.HttpClientModule;
 
 public class ServerInfoModule extends AbstractModule
@@ -28,6 +29,6 @@ public class ServerInfoModule extends AbstractModule
         bind(ServerInfoResource.class);
 
         // Hook up server info headers to the HttpClient.
-        HttpClientModule.bindNewObserver(binder()).to(HttpClientServerInfoObserver.class);
+        HttpClientModule.bindNewObserver(binder(), HttpClientObserverGroup.PLATFORM_INTERNAL).to(HttpClientServerInfoObserver.class);
     }
 }
