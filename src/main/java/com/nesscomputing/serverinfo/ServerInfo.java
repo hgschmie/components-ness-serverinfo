@@ -29,9 +29,9 @@ import javax.annotation.Nullable;
 
 import com.google.common.base.Preconditions;
 
-import org.apache.log4j.MDC;
-
 import com.nesscomputing.logging.Log;
+
+import org.apache.log4j.MDC;
 
 
 /**

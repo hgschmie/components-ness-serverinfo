@@ -19,9 +19,6 @@ import org.apache.log4j.MDC;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.nesscomputing.testing.lessio.AllowLocalFileAccess;
-
-@AllowLocalFileAccess(paths="*.jar")
 public class TestServerInfo
 {
     @Test
